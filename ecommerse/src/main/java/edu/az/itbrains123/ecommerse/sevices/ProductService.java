@@ -1,11 +1,8 @@
 package edu.az.itbrains123.ecommerse.sevices;
 
-import edu.az.itbrains123.ecommerse.dtos.product.ProductDealDto;
-import edu.az.itbrains123.ecommerse.dtos.product.ProductDetailDto;
-import edu.az.itbrains123.ecommerse.dtos.product.ProductHomeDto;
-import edu.az.itbrains123.ecommerse.dtos.product.ProductRelatedDto;
-import edu.az.itbrains123.ecommerse.dtos.testimonial.TestimonialDto;
+import edu.az.itbrains123.ecommerse.dtos.product.*;
 import edu.az.itbrains123.ecommerse.models.Product;
+import edu.az.itbrains123.ecommerse.payload.PaginationPayload;
 
 import java.util.List;
 
@@ -15,4 +12,12 @@ public interface ProductService {
     List<ProductRelatedDto> getRelatedProducts(Long id);
     ProductDealDto getProductDeal();
 
+    PaginationPayload<ProductShopDto> getShopProducts(Integer currentPage);
+
+    void createProduct(ProductCreateDto productCreateDto);
+    void updateProduct(ProductUpdateDto productUpdateDto,Long id);
+    void deleteProduct(Long id);
+    ProductUpdateDto findProductUpdate(Long id);
+    List<ProductHomeDto> findAllProducts();
+    Product findProductById(Long id);
 }

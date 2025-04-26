@@ -7,6 +7,7 @@
     <title>Fruitkha - Home</title>
 </head>
 <body>
+
 <div layout:fragment="content">
 
     <!-- home page slider -->
@@ -92,14 +93,18 @@
 
             <div class="row">
                 <div th:each="product : ${products}" class="col-lg-4 col-md-6 text-center">
+                    <form method="post" action="/cart">
                     <div class="single-product-item">
                         <div class="product-image">
+                            <input type="hidden" name="productId" th:value="${product.id}" />
+                            <input type="hidden" name="quantity" th:value="1" />
                             <a th:href="'/product/detail/'+${product.id}"><img src="https://cdn.pixabay.com/photo/2023/09/29/07/58/mango-8283268_1280.jpg" alt=""></a>
                         </div>
                         <h3 th:text="${product.name}" >Strawberry</h3>
                         <p class="product-price" ><span>Per Kg</span> <h3 th:text="${product.price}+' ₼'  " >85$</h3> </p>
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
+                        </form>
                 </div>
             </div>
         </div>
@@ -292,5 +297,6 @@
     <!-- end logo carousel -->
 
 </div>
+
 </body>
 </html>

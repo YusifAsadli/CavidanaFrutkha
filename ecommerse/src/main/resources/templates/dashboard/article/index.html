@@ -9,22 +9,26 @@
 </head>
 <body >
 <div layout:fragment="body">
-    <a th:href="@{/dashboard/category/create}" class="btn btn-outline-success">Create</a>
+    <a th:href="@{/dashboard/article/create}" class="btn btn-outline-success">Create</a>
     <table class="table">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Category name</th>
+            <th scope="col">Article name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Publish</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="category: ${categories}">
-            <th th:text="${category.id}"  scope="row">1</th>
-            <td th:text="${category.name}">Mark</td>
+        <tr th:each="article: ${articles}">
+            <th th:text="${article.id}"  scope="row">1</th>
+            <td th:text="${article.name}">Mark</td>
+            <td th:text="${article.description}">Mark</td>
+            <td th:text="${article.publish}">Mark</td>
             <td>
-                <a th:href="'/dashboard/category/update/'+${category.id}" class="btn btn-outline-warning">update</a>
-                <a th:href="'/dashboard/category/delete/'+${category.id}" class="btn btn-outline-danger">delete</a>
+                <a th:href="'/dashboard/article/update/'+${article.id}" class="btn btn-outline-warning">update</a>
+                <a th:href="'/dashboard/article/delete/'+${article.id}" class="btn btn-outline-danger">delete</a>
             </td>
         </tr>
         </tbody>

@@ -6,6 +6,7 @@ import lombok.CustomLog;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Article {
     private String name;
     @Column(length = 5000)
     private String description;
-    private Date publish;
+    private LocalDate publish;
 
     @OneToMany(mappedBy = "article")
     private List<Comment> comments;

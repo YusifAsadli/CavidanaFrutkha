@@ -46,6 +46,5 @@ public class HomeController {
     public String contact(){return "/contact";}
     @GetMapping("/news")
     public String news(){return "/news/index";}
-    @GetMapping("/shop")
-    public String shop(){return "/shop/index";}
+
 }

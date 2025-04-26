@@ -1,4 +1,4 @@
-package edu.az.itbrains123.ecommerse.payloand;
+package edu.az.itbrains123.ecommerse.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -9,12 +9,24 @@
 </head>
 <body >
 <div layout:fragment="body">
-    <form method="post">
-        <div class="form-group d-flex">
-            <input type="text" name ="name" th:value="${category.name}" class="form-control col-4" placeholder="Category name" required/>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" name="name" th:value="${article.name}" class="form-control col-4"
+                   placeholder="Article name" required/>
+        </div>
+        <div class="form-group">
+            <input type="text" name="description" th:value="${article.description}" class="form-control col-4"
+                   placeholder="news description" required/>
+        </div>
+
+        <div class="form-group">
+            <input type="date" id="date" name="publish" th:value="${article.publish}" class="form-control col-4" required/>
+        </div>
+
+        <div class="form-group">
             <input type="submit" value="Update" class="btn btn-success"/>
         </div>
-    </form>
+
 </div>
 
 </body>

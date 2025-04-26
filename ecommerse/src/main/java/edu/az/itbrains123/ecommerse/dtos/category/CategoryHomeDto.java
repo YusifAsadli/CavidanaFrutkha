@@ -1,4 +1,4 @@
-package edu.az.itbrains123.ecommerse.dtos;
+package edu.az.itbrains123.ecommerse.dtos.category;
 
 import lombok.Getter;
 import lombok.Setter;

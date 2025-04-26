@@ -1,6 +1,7 @@
 package edu.az.itbrains123.ecommerse.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,9 +9,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Data
 @Entity
-@Getter
-@Setter
 @Table(name = "categories")
 public class Category {
     @Id

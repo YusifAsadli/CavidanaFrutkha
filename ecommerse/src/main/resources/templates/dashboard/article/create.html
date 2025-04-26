@@ -8,9 +8,18 @@
 </head>
 <body>
 <div layout:fragment="body">
-    <form method="post">
-        <div class="form-group d-flex">
-            <input type="text" name ="name" class="form-control col-4" placeholder="Category name" required/>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="text" name="name" class="form-control col-4" placeholder="Name" required/>
+        </div>
+        <div class="form-group">
+            <textarea id="cemil" type="text" name="description" class="form-control col-4" placeholder="Description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="date" id="date" name="publish" class="form-control col-4" placeholder="Publish" required/>
+        </div>
+        <div class="form-group">
             <input type="submit" value="Create" class="btn btn-success"/>
         </div>
     </form>

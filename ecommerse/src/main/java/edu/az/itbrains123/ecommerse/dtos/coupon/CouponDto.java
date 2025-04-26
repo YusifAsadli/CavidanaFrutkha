@@ -1,2 +1,13 @@
-package edu.az.itbrains123.ecommerse.dtos.coupon;public class CouponDto {
+package edu.az.itbrains123.ecommerse.dtos.coupon;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CouponDto {
+    private String name;
+    private Float discount;
 }

@@ -16,7 +16,7 @@ public class Comment {
     private Date publish;
 
     @ManyToOne
-    private User user;
+    private UserEntity user;
 
     @ManyToOne
     private Article article;
